@@ -147,6 +147,10 @@ Six-ticker panel, 2018 train / 2019 val / Q1 2020 test, daily blocks:
 | dbscan | 0.046 | 5/12 | 0.417 |
 | consensus | 0.212 | 10/12 | 0.833 |
 
+![Consensus anomalies over close price, Q1 2020](docs/flags-over-price.png)
+
+The table reproduces from the committed `data/prices.parquet` with `python run_pipeline.py` (no network needed).
+
 Here the consensus earns its place: it catches one stress day that no single
 layer catches alone. On 2020-03-11, NVDA's rule label is `normal` and it clears
 the k-means distance cut, but it is flagged as DBSCAN noise, and that is the
